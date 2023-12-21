@@ -48,7 +48,7 @@ const checkWinner = () => {
     if (pos1val != "" && pos2val != "" && pos3val != "") {
       if (pos1val === pos2val && pos2val === pos3val) {
         console.log("winner", pos1val);
-        showWinner(pos1val);
+        // showWinner(pos1val);
         return;
       }
     } else {
@@ -81,7 +81,7 @@ const disabledBoxes = () => {
   }
 };
 
-//reseting the box and also the winner message
+//reseting the box and also hiding the winner message
 const resetGame = () => {
   for (let box of boxes) {
     box.disabled = false;
