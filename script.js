@@ -35,6 +35,8 @@ boxes.forEach((box) => {
 
 //the values of the boxes wrt the winning patterns are stored in posval constant
 const checkWinner = () => {
+  let draw = true; //checking the draw condition
+
   for (let patterns of winPatterns) {
     // console.log(patterns[0], patterns[1], patterns[2]);
     // console.log(boxes[patterns[0]].innerText, boxes[patterns[1]].innerText, boxes[patterns[2]].innerText);  //checking if the X and Os are matching with the pattern.
@@ -47,14 +49,27 @@ const checkWinner = () => {
       if (pos1val === pos2val && pos2val === pos3val) {
         console.log("winner", pos1val);
         showWinner(pos1val);
+        return;
       }
+    } else {
+      draw = false;
     }
+  }
+  if (draw) {
+    showDraw();
   }
 };
 
 // displaying winner
 const showWinner = (winner) => {
   mesg.innerText = `Winner is ${winner}`;
+  mesgContainer.classList.remove("hide");
+  disabledBoxes();
+};
+
+//draw
+const showDraw = () => {
+  mesg.innerText = "Draw";
   mesgContainer.classList.remove("hide");
   disabledBoxes();
 };
