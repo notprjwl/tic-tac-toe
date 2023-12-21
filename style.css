@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kalam:wght@300;400;700&family=Roboto:wght@300;400;500;700&family=Rubik+Broken+Fax&family=Rubik+Doodle+Shadow&family=Rubik+Lines&family=Silkscreen:wght@400;700&family=Single+Day&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #111617;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 50px;
+  font-family: "Rubik Broken Fax", "courier new";
+  color: #a1b6ba;
+  text-shadow: 0 0 2rem rgba(161, 182, 186, 0.5);
+}
+
+h2 {
+  margin-top: 30px;
+  font-size: 10px;
+  font-family: "Silkscreen", "courier new";
+  color: #a1b6ba;
+  text-shadow: 0 0 2rem rgba(161, 182, 186, 0.5);
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2vmin;
+  row-gap: 1vmin;
+}
+
+.box {
+  background-color: #fff;
+  font-family: "indie flower", "courier new";
+  font-size: 8vmin;
+  color: #111617;
+  font-weight: 600;
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.6);
+}
+
+#reset-btn {
+  font-family: "Silkscreen", "courier new";
+  font-size: 2vmin;
+  font-weight: bolder;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #111617;
+  background-color: #94a3a5;
+  box-shadow: 0 0 2rem rgba(161, 182, 186, 0.5);
+  border: none;
+  font-style: bold;
+  border-radius: 0.7rem;
+}
+
+#mesg {
+  font-family: "Silkscreen", "courier new";
+  font-size: large;
+  color: #a1b6ba;
+  text-shadow: 0 0 4rem rgba(161, 182, 186, 0.5);
+  font-weight: bolder;
+  /* padding-top: 1rem; */
+}
+
+.mesg-container {
+  text-align: center;
+  align-items: center;
+  padding: 1rem ;
+}
+
+.hide {
+  display: none;
+}
+
+a {
+  color: #a1b6ba;
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 12px;
+  }
+
+  .container {
+    height: 50vh;
+  }
+
+  .game {
+    gap: 1vmin;
+    row-gap: 0.5vmin;
+  }
+
+
+  #reset-btn {
+    font-size: 4vmin;
+    
+  }
+
+  #mesg {
+    font-size: medium;
+  }
+
+  .mesg-container {
+    padding: 0.5rem;
+  }
+}
