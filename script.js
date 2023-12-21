@@ -47,8 +47,8 @@ const checkWinner = () => {
     //winner logic - every boxes needs to be filled and we will check if all the values are same and matches the pattern then print winner.
     if (pos1val != "" && pos2val != "" && pos3val != "") {
       if (pos1val === pos2val && pos2val === pos3val) {
-        console.log("winner", pos1val);
-        // showWinner(pos1val);
+        // console.log("winner", pos1val);
+        showWinner(pos1val);
         return;
       }
     } else {
